@@ -1,4 +1,4 @@
-# Hi, I'm Ryan
+# Hi, I'm <span style="color: #8D41E6;"> Ryan</span>
 
 ## Welcome to my page.
 
