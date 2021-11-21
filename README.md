@@ -1,16 +1,13 @@
-### Hi there 👋
+# Hi, I'm Ryan
 
-<!--
-**rmmccar92/rmmccar92** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Welcome to my page.
 
-Here are some ideas to get you started:
+Check out my most recent projects below.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=rmmccar92&repo=PodCentral&theme=midnight-purple)](https://github.com/rmmccar92/PodCentral)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=rmmccar92&repo=Farmers-Market-Search&theme=midnight-purple)](https://github.com/rmmccar92/Farmers-Market-Search)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=rmmccar92&repo=Confused-Gamer&theme=midnight-purple)](https://github.com/rmmccar92/Confused-Gamer)
+
+<img align="center" src="https://github-readme-stats.vercel.app/api/?username=rmmccar92&theme=midnight-purple" />
+
+Reach out to rmmccar92@gmail.com for questions.
