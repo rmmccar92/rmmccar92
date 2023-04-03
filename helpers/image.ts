@@ -1,5 +1,5 @@
 // Packages
-import { VercelResponse } from "@vercel/node";
+import type { NextApiResponse as Response } from "next";
 import fetch from "node-fetch";
 
 // Local Imports
@@ -11,9 +11,9 @@ import {
 /**
  * Sets headers for Response object to return an image.
  *
- * @param {VercelResponse} res Response to request.
+ * @param {Response} res Response to request.
  */
-export const convertToImageResponse = (res: VercelResponse) => {
+export const convertToImageResponse = (res: Response) => {
   res.setHeader(...IMAGE_RESPONSE_HEADERS);
   res.setHeader(...CACHE_CONTROL_RESPONSE_HEADERS);
 };
