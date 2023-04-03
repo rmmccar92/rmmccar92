@@ -1,24 +1,27 @@
 // Packages
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type {
+  NextApiRequest as Request,
+  NextApiResponse as Response,
+} from "next";
 import { renderToString } from "react-dom/server";
 
 // Local Imports
-import { ERROR_MESSAGE_500, SPOTIFY_TIME_RANGE_KEYS } from "../../../../config";
-import { convertToImageResponse } from "../../../../helpers/image";
-import { convertTrackToMinimumData } from "../../../../helpers/spotify";
-import { TopPlayed } from "../../../../components/spotify/TopPlayed";
-import spotify from "../../spotify";
+import { ERROR_MESSAGE_500, SPOTIFY_TIME_RANGE_KEYS } from "../../config";
+import { convertToImageResponse } from "../../helpers/image";
+import { convertTrackToMinimumData } from "../../helpers/spotify";
+import { TopPlayed } from "../../components/spotify/TopPlayed";
+import spotify from "./spotify";
 
 // Types
-import { IConvertedTrackObject, ITrackObject } from "../../../../types/spotify";
+import { IConvertedTrackObject, ITrackObject } from "../../types/spotify";
 
 /**
  * Returns an image displaying my top five played tracks for three various time ranges.
  *
- * @param {VercelRequest} req Request for image.
- * @param {VercelResponse} res Response to request.
+ * @param {Request} req Request for image.
+ * @param {Response} res Response to request.
  */
-export default async function (req: VercelRequest, res: VercelResponse) {
+export default async function (req: Request, res: Response) {
   try {
     // Retrieving top played tracks from spotify.
     const topPlayedTracks: ITrackObject[][] = await Promise.all(

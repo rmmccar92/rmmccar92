@@ -1,25 +1,28 @@
 // Packages
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type {
+  NextApiRequest as Request,
+  NextApiResponse as Response,
+} from "next";
 import { decode, ParsedUrlQuery } from "querystring";
 import { renderToString } from "react-dom/server";
 
 // Local Imports
-import { convertTrackToMinimumData } from "../../../../helpers/spotify";
-import { convertToImageResponse } from "../../../../helpers/image";
-import { ERROR_MESSAGE_500 } from "../../../../config";
-import { Player } from "../../../../components/spotify/NowPlaying";
-import spotify from "../../spotify";
+import { convertTrackToMinimumData } from "../../helpers/spotify";
+import { convertToImageResponse } from "../../helpers/image";
+import { ERROR_MESSAGE_500 } from "../../config";
+import { Player } from "../../components/spotify/NowPlaying";
+import spotify from "./spotify";
 
 // Types
-import { IAudioFeaturesResponse } from "../../../../types/spotify";
+import { IAudioFeaturesResponse } from "../../types/spotify";
 
 /**
  * Returns an image displaying my current playback state, with nice music bars.
  *
- * @param {VercelRequest} req Request for image.
- * @param {VercelResponse} res Response to request.
+ * @param {Request} req Request for image.
+ * @param {Response} res Response to request.
  */
-export default async function (req: VercelRequest, res: VercelResponse) {
+export default async function (req: Request, res: Response) {
   try {
     // Get current playing item.
     const nowPlaying = await spotify.getNowPlaying();
