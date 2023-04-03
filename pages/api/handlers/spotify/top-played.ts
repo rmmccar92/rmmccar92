@@ -7,7 +7,7 @@ import { ERROR_MESSAGE_500, SPOTIFY_TIME_RANGE_KEYS } from "../../../../config";
 import { convertToImageResponse } from "../../../../helpers/image";
 import { convertTrackToMinimumData } from "../../../../helpers/spotify";
 import { TopPlayed } from "../../../../components/spotify/TopPlayed";
-import api from "../../api";
+import spotify from "../../spotify";
 
 // Types
 import { IConvertedTrackObject, ITrackObject } from "../../../../types/spotify";
@@ -23,7 +23,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     // Retrieving top played tracks from spotify.
     const topPlayedTracks: ITrackObject[][] = await Promise.all(
       SPOTIFY_TIME_RANGE_KEYS.map(
-        async (timeRange) => await api.spotify.getTopPlayed(timeRange)
+        async (timeRange) => await spotify.getTopPlayed(timeRange)
       )
     );
     const topPlayedConvertedTracks: IConvertedTrackObject[][] =
@@ -43,6 +43,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
 
     // Generating the component and rendering it
     const text: string = renderToString(
+      // @ts-ignore
       TopPlayed({ trackLists: topPlayedConvertedTracks })
     );
 
