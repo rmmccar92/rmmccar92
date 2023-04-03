@@ -7,7 +7,7 @@ import {
   MOCKED_SPOTIFY_AUDIO_FEATURES,
   MOCKED_SPOTIFY_LAST_PLAYED,
   MOCKED_SPOTIFY_TOP_PLAYED,
-} from "../../data/spotify";
+} from "../data/spotify";
 import {
   SPOTIFY_AUTHORIZATION,
   SPOTIFY_AUTHORIZATION_URL,
@@ -16,9 +16,9 @@ import {
   SPOTIFY_GET_TRACK_URL,
   SPOTIFY_GET_TOP_PLAYED_URL,
   SPOTIFY_RECENTLY_PLAYED_URL,
-} from "../../config";
-import { defaultCurrentlyPlayingResponse } from "../../helpers/spotify";
-import { Environment } from "../../helpers/environment";
+} from "../config";
+import { defaultCurrentlyPlayingResponse } from "../helpers/spotify";
+import { Environment } from "../helpers/environment";
 
 // Types
 import {
@@ -29,7 +29,7 @@ import {
   IPagingObject,
   IPlayHistoryObject,
   ITrackObject,
-} from "../../types/spotify";
+} from "../types/spotify";
 
 let AuthorizationToken: null | string = null;
 

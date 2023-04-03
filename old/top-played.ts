@@ -10,7 +10,7 @@ import { ERROR_MESSAGE_500, SPOTIFY_TIME_RANGE_KEYS } from "../../config";
 import { convertToImageResponse } from "../../helpers/image";
 import { convertTrackToMinimumData } from "../../helpers/spotify";
 import { TopPlayed } from "../../components/spotify/TopPlayed";
-import spotify from "./spotify";
+import spotify from "../../old/spotify";
 
 // Types
 import { IConvertedTrackObject, ITrackObject } from "../../types/spotify";

@@ -7,14 +7,14 @@ import { decode, ParsedUrlQuery } from "querystring";
 import { renderToString } from "react-dom/server";
 
 // Local Imports
-import { convertTrackToMinimumData } from "../../helpers/spotify";
-import { convertToImageResponse } from "../../helpers/image";
-import { ERROR_MESSAGE_500 } from "../../config";
-import { Player } from "../../components/spotify/NowPlaying";
+import { convertTrackToMinimumData } from "../helpers/spotify";
+import { convertToImageResponse } from "../helpers/image";
+import { ERROR_MESSAGE_500 } from "../config";
+import { Player } from "../components/spotify/NowPlaying";
 import spotify from "./spotify";
 
 // Types
-import { IAudioFeaturesResponse } from "../../types/spotify";
+import { IAudioFeaturesResponse } from "../types/spotify";
 
 /**
  * Returns an image displaying my current playback state, with nice music bars.
