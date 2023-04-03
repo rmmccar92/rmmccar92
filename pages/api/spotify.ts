@@ -7,7 +7,7 @@ import {
   MOCKED_SPOTIFY_AUDIO_FEATURES,
   MOCKED_SPOTIFY_LAST_PLAYED,
   MOCKED_SPOTIFY_TOP_PLAYED,
-} from "../data/spotify";
+} from "../../data/spotify";
 import {
   SPOTIFY_AUTHORIZATION,
   SPOTIFY_AUTHORIZATION_URL,
@@ -16,9 +16,9 @@ import {
   SPOTIFY_GET_TRACK_URL,
   SPOTIFY_GET_TOP_PLAYED_URL,
   SPOTIFY_RECENTLY_PLAYED_URL,
-} from "../config";
-import { defaultCurrentlyPlayingResponse } from "../helpers/spotify";
-import { Environment } from "../helpers/environment";
+} from "../../config";
+import { defaultCurrentlyPlayingResponse } from "../../helpers/spotify";
+import { Environment } from "../../helpers/environment";
 
 // Types
 import {
@@ -29,7 +29,7 @@ import {
   IPagingObject,
   IPlayHistoryObject,
   ITrackObject,
-} from "../types/spotify";
+} from "../../types/spotify";
 
 let AuthorizationToken: null | string = null;
 
@@ -80,7 +80,7 @@ const getLastPlayed = async (): Promise<ICurrentlyPlayingResponse> => {
 
   const Authorization: string = await getAuthorizationToken();
 
-  const response: Response = await fetch(SPOTIFY_RECENTLY_PLAYED_URL, {
+  const response: any = await fetch(SPOTIFY_RECENTLY_PLAYED_URL, {
     headers: {
       Authorization,
     },
@@ -92,7 +92,7 @@ const getLastPlayed = async (): Promise<ICurrentlyPlayingResponse> => {
     const data: ICursorBasedPagingObject<IPlayHistoryObject> =
       await response.json();
 
-    const trackResponse: Response = await fetch(
+    const trackResponse: any = await fetch(
       `${SPOTIFY_GET_TRACK_URL}/${data.items[0].track.id}`,
       {
         headers: {
@@ -120,7 +120,7 @@ const getNowPlaying = async (): Promise<ICurrentlyPlayingResponse> => {
     return defaultCurrentlyPlayingResponse(Authorization);
   }
 
-  const response: Response = await fetch(SPOTIFY_CURRENT_PLAYING_URL, {
+  const response: any = await fetch(SPOTIFY_CURRENT_PLAYING_URL, {
     headers: {
       Authorization,
     },
@@ -153,7 +153,7 @@ const getTracksAudioFeatures = async (
 
   const Authorization: string = await getAuthorizationToken();
 
-  const response: Response = await fetch(
+  const response: any = await fetch(
     `${SPOTIFY_GET_TRACK_AUDIO_FEATURES_URL}/${id}`,
     {
       headers: {
@@ -184,7 +184,7 @@ const getTopPlayed = async (timeRange: string): Promise<ITrackObject[]> => {
 
   const Authorization: string = await getAuthorizationToken();
 
-  const response: Response = await fetch(
+  const response: any = await fetch(
     `${SPOTIFY_GET_TOP_PLAYED_URL}${timeRange}`,
     {
       headers: {
