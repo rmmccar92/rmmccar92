@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "get-refresh-token": "ts-node scripts/get-refresh-token.ts"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -14,12 +15,14 @@
     "@types/react-dom": "18.0.11",
     "axios": "^0.21.4",
     "dotenv": "^14.2.0",
-    "next": "13.2.4",
+    "next": "^13.2.4",
+    "next-connect": "^0.13.0",
     "node-fetch": "^2.6.9",
     "querystring": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.3"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.6.3"

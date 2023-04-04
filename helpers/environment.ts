@@ -15,7 +15,6 @@ export class Environment {
   static getSpotifyClientId(): string {
     return process.env.SPOTIFY_CLIENT_ID || "#";
   }
-
   /**
    * Retrieves Spotify client secret.
    *
@@ -30,8 +29,9 @@ export class Environment {
    *
    * @returns {string} Spotify refresh token.
    */
+
   static getSpotifyRefreshToken(): string {
-    return process.env.SPOTIFY_REFRESH_TOKEN || "#";
+    return process.env.REFRESH_TOKEN || "#";
   }
 
   /**
