@@ -39,7 +39,7 @@ export const Player: React.FC<IPlayerProps> = ({
 }: IPlayerProps) => {
   return (
     <ConvertSVG height="125" width="466">
-      <Text id="title" color="standard" size="title" weight="bold">
+      <Text id="title" color="white" size="title" weight="bold">
         {isPlaying ? "Now Playing!" : "last jammed out to"}
       </Text>
 
@@ -63,16 +63,10 @@ export const Player: React.FC<IPlayerProps> = ({
           style={{
             alignItems: "center",
             display: "flex",
-            // background: "rgba(6, 4, 54, 0.6)",
             border: "1px solid rgba(125, 125, 125, .3)",
-            // background: "hsla(197, 100%, 63%, 1)",
-
+            color: "white",
             background:
               "linear-gradient(45deg, hsla(0, 0%, 5%, 1) 56%, rgb(90, 3, 157) 100%)",
-            // background: "-moz-linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%)",
-
-            // background: "-webkit-linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%)",
-
             filter:
               "progid: DXImageTransform.Microsoft.gradient( startColorstr=#40C9FF, endColorstr=#E81CFF, GradientType=1 )",
             borderRadius: ".3rem",
@@ -97,7 +91,7 @@ export const Player: React.FC<IPlayerProps> = ({
               {`${track.name ?? ""} `.trim()}
             </Text>
 
-            <Text color={!track ? "gray" : undefined} id="artist" size="small">
+            <Text color={!track ? "white" : undefined} id="artist" size="small">
               {track.artist || "Nothing Currently"}
             </Text>
             {track && (

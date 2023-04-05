@@ -30,7 +30,7 @@ interface ITextParameters {
  */
 const Text: React.FC<ITextParameters> = ({
   children = "",
-  color = "default",
+  color = "white",
   fontFamily = "default",
   size = "default",
   weight = "default",
