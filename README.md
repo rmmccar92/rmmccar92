@@ -8,7 +8,7 @@
 ## Welcome to my page.
 
 #Test
- <img src="https://rmmccar92-go6lqug7d-rmmccar92.vercel.app/api/now-playing">
+ <img src="https://rmmccar92-59qgosrv3-rmmccar92.vercel.app/api/now-playing">
 
 ## Here are some of the tools I've worked with:
 <p align="center">
