@@ -49,23 +49,33 @@ export const nowPlaying = async () => {
   });
 };
 
-export const getAudioFeatures = async (
-  id: string
-): Promise<IAudioFeaturesResponse | object> => {
+export const lastPlayed = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch("https://api.spotify.com/v1/me/player/recently-played", {
+    headers: {
+      "Authorization": `Bearer ${access_token}`,
+    },
+  });
+};
+
+export const getAudioFeatures = async (id: string): Promise<any | object> => {
   // This is for if it doesn't work we don't want this right now
   // if(Environment.useMockData()) {
   //     return MOCKED_SPOTIFY_AUDIO_FEATURES;
   // }
+  console.log("GET AUDIO FEATURES", id);
   const { access_token } = await getAccessToken();
-
-  const response: any = await fetch(
-    "https://api.spotify.com/v1/audio-features",
-    {
+  try {
+    return fetch(`https://api.spotify.com/v1/audio-features/${id}`, {
       headers: {
         "Authorization": `Bearer ${access_token}`,
       },
-    }
-  );
-
-  return response;
+    });
+    // console.log("RESPONSE", response);
+    // return response;
+  } catch (e) {
+    console.log("ERROR", e);
+    return {};
+  }
 };

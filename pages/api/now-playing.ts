@@ -1,4 +1,4 @@
-import { nowPlaying, getAudioFeatures } from "../../lib/spotify";
+import { nowPlaying, getAudioFeatures, lastPlayed } from "../../lib/spotify";
 import type {
   NextApiRequest as Request,
   NextApiResponse as Response,
@@ -12,20 +12,25 @@ import { renderToString } from "react-dom/server";
 
 export default async function handler(req: Request, res: Response) {
   const response = await nowPlaying();
+  // console.log("NOW PLAYING RESPONSE", response);
   const data = await response.json();
   // console.log("DATA", data);
   // res.status(200).json(data);
   const { item } = data;
+  // setting default values in case is_playing and progress_ms are undefined
   const { is_playing: isPlaying = false, progress_ms: progress = 0 } = data;
   // console.log("is_playing01", is_playing);
 
   // TODO: Build exception if nothing is playing this won't work right now
-  // if(!item) {
-  //   const response = await lastPlayed();
-  //   res.status(200).json({is_playing: false});
-  // }
-  // If the link was clicked, reroute them to the href.
+  if (!item) {
+    const response = await lastPlayed();
+    // res.status(200).json({ is_playing: false });
+    const data = await response.json();
+    console.log("NO ITEM DATA", data);
+    const { items } = data;
+  }
 
+  // If the link was clicked, reroute them to the href. ie the spotify page.
   if (req.url) {
     const params: ParsedUrlQuery = decode(req.url.split("?")[1]);
 
@@ -45,7 +50,9 @@ export default async function handler(req: Request, res: Response) {
   if (item !== null) {
     if (Object.keys(item).length) {
       // console.log("ITEM");
-      audioFeatures = await getAudioFeatures(item.id);
+      const data = await getAudioFeatures(item.id);
+      audioFeatures = await data.json();
+      // console.log("AUDIO FEATURES", audioFeatures);
     }
 
     const track = await convertTrackToMinimumData(item);

@@ -89,15 +89,24 @@ img:not([src]) {
   align-items: flex-end;
 }
 
-.bar {
-  offset: 0;
+.left .bar {
+  border-radius: 6px 0 0 2px;
+}
 
+.right .bar {
+  border-radius: 0 2px 6px 0;
+}
+
+.bar {
+  --offset: 0;
   animation: bars ${
     audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1
   }s ease calc(var(--offset) * -.5s) infinite;
-  background: rgba(${audioFeatures ? audioFeatures.energy * 255 : 255}, ${
-  audioFeatures ? audioFeatures.valence * 255 : 255
-}, ${audioFeatures ? audioFeatures.danceability * 255 : 255}, .7);
+  background: rgba(${audioFeatures ? audioFeatures.energy * 200 : 255}, ${
+  audioFeatures ? audioFeatures.valence * 200 : 255
+}, ${audioFeatures ? audioFeatures.danceability * 200 : 255}, 0.75);
+backdrop-filter: blur(10px);
+
   height: 10px;
   margin: 2px 0;
   width: 50px;
