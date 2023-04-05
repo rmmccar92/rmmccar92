@@ -1,3 +1,13 @@
+import {
+  IAudioFeaturesResponse,
+  IAuthorizationTokenResponse,
+  ICurrentlyPlayingResponse,
+  ICursorBasedPagingObject,
+  IPagingObject,
+  IPlayHistoryObject,
+  ITrackObject,
+} from "../types/spotify";
+
 const getAccessToken = async () => {
   const refresh_token = process.env.REFRESH_TOKEN;
 
@@ -37,4 +47,31 @@ export const nowPlaying = async () => {
       "Authorization": `Bearer ${access_token}`,
     },
   });
+};
+
+export const getAudioFeatures = async (
+  id: string
+): Promise<IAudioFeaturesResponse | object> => {
+  // This is for if it doesn't work we don't want this right now
+  // if(Environment.useMockData()) {
+  //     return MOCKED_SPOTIFY_AUDIO_FEATURES;
+  // }
+  const { access_token } = await getAccessToken();
+
+  const response: any = await fetch(
+    "https://api.spotify.com/v1/audio-features",
+    {
+      headers: {
+        "Authorization": `Bearer ${access_token}`,
+      },
+    }
+  );
+
+  const { status } = response;
+  if (status === 200) {
+    return response.json();
+  } else {
+    console.error("Error getting audio features", response);
+    return {};
+  }
 };
