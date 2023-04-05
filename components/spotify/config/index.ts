@@ -91,9 +91,23 @@ img:not([src]) {
 
 .left .bar {
   border-radius: 6px 0 0 2px;
+  background: linear-gradient(to left, rgba(${
+    audioFeatures ? audioFeatures.energy * 125 : 255
+  }, ${audioFeatures ? audioFeatures.valence * 125 : 255}, ${
+  audioFeatures ? audioFeatures.danceability * 125 : 255
+}) 0%, rgba(${audioFeatures ? audioFeatures.energy * 255 : 255}, ${
+  audioFeatures ? audioFeatures.valence * 255 : 255
+}, ${audioFeatures ? audioFeatures.danceability * 255 : 255}, 0.5) 100% );
 }
 
 .right .bar {
+  background: linear-gradient(to right, rgba(${
+    audioFeatures ? audioFeatures.energy * 125 : 255
+  }, ${audioFeatures ? audioFeatures.valence * 125 : 255}, ${
+  audioFeatures ? audioFeatures.danceability * 125 : 255
+}) 0%, rgba(${audioFeatures ? audioFeatures.energy * 255 : 255}, ${
+  audioFeatures ? audioFeatures.valence * 255 : 255
+}, ${audioFeatures ? audioFeatures.danceability * 255 : 255}, 0.5) 100% );
   border-radius: 0 2px 6px 0;
 }
 
@@ -102,9 +116,7 @@ img:not([src]) {
   animation: bars ${
     audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1
   }s ease calc(var(--offset) * -.5s) infinite;
-  background: rgba(${audioFeatures ? audioFeatures.energy * 200 : 255}, ${
-  audioFeatures ? audioFeatures.valence * 200 : 255
-}, ${audioFeatures ? audioFeatures.danceability * 200 : 255}, 0.75);
+
 backdrop-filter: blur(10px);
 
   height: 10px;
