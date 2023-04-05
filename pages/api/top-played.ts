@@ -7,6 +7,6 @@ import type {
 export default async function handler(req: Request, res: Response) {
   const response = await topTracks();
   const data = await response.json();
-  console.log("DATA", data);
+  // console.log("DATA", data);
   res.status(200).json(data);
 }

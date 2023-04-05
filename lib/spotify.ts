@@ -29,7 +29,7 @@ const getAccessToken = async () => {
 
 export const topTracks = async () => {
   const { access_token } = await getAccessToken();
-  console.log("ACCESS TOKEN", access_token);
+  // console.log("ACCESS TOKEN", access_token);
 
   return fetch("https://api.spotify.com/v1/me/top/tracks", {
     headers: {
@@ -40,7 +40,7 @@ export const topTracks = async () => {
 
 export const nowPlaying = async () => {
   const { access_token } = await getAccessToken();
-  console.log("ACCESS TOKEN", access_token);
+  // console.log("ACCESS TOKEN", access_token);
 
   return fetch("https://api.spotify.com/v1/me/player/currently-playing", {
     headers: {

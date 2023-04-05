@@ -62,7 +62,7 @@ export default async function handler(req: Request, res: Response) {
         track,
       })
     );
-    console.log("TEXT", text);
+    // console.log("TEXT", text);
     return res.send(text);
   }
 }

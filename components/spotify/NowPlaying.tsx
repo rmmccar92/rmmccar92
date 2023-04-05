@@ -40,7 +40,7 @@ export const Player: React.FC<IPlayerProps> = ({
   return (
     <ConvertSVG height="125" width="466">
       <Text id="title" color="standard" size="title" weight="bold">
-        {isPlaying ? "currently jamming out to" : "last jammed out to"}
+        {isPlaying ? "Now Playing!" : "last jammed out to"}
       </Text>
 
       <div className="now-playing-wrapper">
@@ -51,8 +51,7 @@ export const Player: React.FC<IPlayerProps> = ({
                 className="bar"
                 key={`left-bar-${bar}`}
                 style={{
-                  // @ts-ignore
-                  "--offset": bar,
+                  offset: "bar",
                 }}
               />
             ))}
@@ -64,8 +63,18 @@ export const Player: React.FC<IPlayerProps> = ({
           style={{
             alignItems: "center",
             display: "flex",
-            background: "rgb(255,255,255,.6)",
+            // background: "rgba(6, 4, 54, 0.6)",
             border: "1px solid rgba(125, 125, 125, .3)",
+            // background: "hsla(197, 100%, 63%, 1)",
+
+            background:
+              "linear-gradient(45deg, hsla(0, 0%, 5%, 1) 56%, rgb(90, 3, 157) 100%)",
+            // background: "-moz-linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%)",
+
+            // background: "-webkit-linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%)",
+
+            filter:
+              "progid: DXImageTransform.Microsoft.gradient( startColorstr=#40C9FF, endColorstr=#E81CFF, GradientType=1 )",
             borderRadius: ".3rem",
             margin: ".5rem 0",
             padding: ".6rem",
@@ -106,8 +115,7 @@ export const Player: React.FC<IPlayerProps> = ({
                 className="bar"
                 key={`right-bar-${bar}`}
                 style={{
-                  // @ts-ignore
-                  "--offset": bar,
+                  offset: "bar",
                 }}
               />
             ))}
