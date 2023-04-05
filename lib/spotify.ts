@@ -67,11 +67,5 @@ export const getAudioFeatures = async (
     }
   );
 
-  const { status } = response;
-  if (status === 200) {
-    return response.json();
-  } else {
-    console.error("Error getting audio features", response);
-    return {};
-  }
+  return response;
 };
