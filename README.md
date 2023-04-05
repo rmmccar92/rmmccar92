@@ -5,13 +5,20 @@
 
 # I'm <span style="color: #8D41E6;"> Ryan</span>
 
-## Welcome to my page.
+<h2>Welcome to my page.</h2>
+<br/>
+<br/>
 <div align="center">
+<a href="https://rmmccar92.vercel.app/api/now-playing?open">
  <img src="https://rmmccar92.vercel.app/api/now-playing">
+ </a>
  <p>
  You can check out how I did this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
 </div>
-## Here are some of the tools I've worked with:
+<br/>
+<br/>
+<div align="center">
+<h3> Here are some of the tools I've worked with: </h3>
 <p align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45" />
@@ -28,7 +35,7 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" alt="heroku" width="45" height="45" />
                     
 </p>
-
+</div>
 <p align="center">
 Reach out to rmmccar92@gmail.com for questions.
 </p>

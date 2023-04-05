@@ -90,7 +90,7 @@ img:not([src]) {
 }
 
 .bar {
-  --offset: 0;
+  offset: 0;
 
   animation: bars ${
     audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1
@@ -105,7 +105,7 @@ img:not([src]) {
 
 .progress-bar {
   animation-delay: 550ms;
-  border: 1px solid #e1e4e8;
+  border: 0.55px solid silver;
   border-radius: 4px;
   height: 4px;
   margin: -1px;
@@ -120,7 +120,7 @@ img:not([src]) {
 #progress {
   animation: progress ${duration}ms linear;
   animation-delay: -${progress}ms;
-  background-color: #24292e;
+  background: linear-gradient( to right, #2a2c2e 5%, #3d4145 80%, #11f005 95%, rgba(0,0,0,.1));
   height: 6px;
   left: 0;
   position: absolute;
