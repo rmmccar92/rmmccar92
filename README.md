@@ -7,6 +7,9 @@
 
 ## Welcome to my page.
 
+#Test
+ <img src="https://rmmccar92-go6lqug7d-rmmccar92.vercel.app/api/now-playing">
+
 ## Here are some of the tools I've worked with:
 <p align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
@@ -25,8 +28,5 @@
                     
 </p>
 
-## Credits before I forget
-https://github.com/andyruwruw/andyruwruw
-https://github.com/natemoo-re
 
 Reach out to rmmccar92@gmail.com for questions.
