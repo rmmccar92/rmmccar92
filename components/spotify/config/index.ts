@@ -116,9 +116,6 @@ img:not([src]) {
   animation: bars ${
     audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1
   }s ease calc(var(--offset) * -.5s) infinite;
-
-backdrop-filter: blur(10px);
-
   height: 10px;
   margin: 2px 0;
   width: 50px;
