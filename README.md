@@ -7,7 +7,7 @@
 
 ## Welcome to my page.
 <div align="center">
- <img src="https://rmmccar92-59qgosrv3-rmmccar92.vercel.app/api/now-playing">
+ <img src="https://rmmccar92.vercel.app/api/now-playing">
  <p>
  You can check out how I this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
 </div>
