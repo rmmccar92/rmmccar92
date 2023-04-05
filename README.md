@@ -6,9 +6,9 @@
 # I'm <span style="color: #8D41E6;"> Ryan</span>
 
 ## Welcome to my page.
-
+<div align="center">
  <img src="https://rmmccar92-59qgosrv3-rmmccar92.vercel.app/api/now-playing">
-
+</div>
 ## Here are some of the tools I've worked with:
 <p align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
