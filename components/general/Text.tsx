@@ -30,7 +30,7 @@ interface ITextParameters {
  */
 const Text: React.FC<ITextParameters> = ({
   children = "",
-  color = "white",
+  color = "gray-light",
   fontFamily = "default",
   size = "default",
   weight = "default",
@@ -40,7 +40,7 @@ const Text: React.FC<ITextParameters> = ({
     <p
       style={{
         // @ts-ignore
-        color: TEXT_COLORS[color],
+        color: "white",
         // @ts-ignore
         fontFamily: TEXT_FONT_FAMILIES[fontFamily],
         // @ts-ignore
