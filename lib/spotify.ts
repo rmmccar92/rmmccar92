@@ -31,11 +31,14 @@ export const topTracks = async () => {
   const { access_token } = await getAccessToken();
   // console.log("ACCESS TOKEN", access_token);
 
-  return fetch("https://api.spotify.com/v1/me/top/tracks", {
-    headers: {
-      "Authorization": `Bearer ${access_token}`,
-    },
-  });
+  return fetch(
+    "https://api.spotify.com/v1/me/top/tracks?limit=9&time_range=long_term",
+    {
+      headers: {
+        "Authorization": `Bearer ${access_token}`,
+      },
+    }
+  );
 };
 
 export const nowPlaying = async () => {

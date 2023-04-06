@@ -19,6 +19,8 @@ export const convertTrackToMinimumData = async (
 ): Promise<IConvertedTrackObject> => {
   let albumArtUrl =
     "https://raw.githubusercontent.com/andyruwruw/andyruwruw/master/src/assets/images/default-album-art.png";
+
+  // console.log("TRACK", track);
   if (
     "album" in track &&
     "images" in track.album &&

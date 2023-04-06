@@ -10,7 +10,14 @@ import Text from "../general/Text";
 import { IConvertedTrackObject } from "../../types/spotify";
 
 export interface ITopPlayedProps {
-  trackLists: IConvertedTrackObject[][];
+  trackLists: {
+    track: IConvertedTrackObject;
+    term: number;
+    href: string;
+    image: string;
+    name: string;
+    artist: string;
+  }[];
 }
 
 /**
@@ -25,34 +32,27 @@ export const TopPlayed: React.FC<ITopPlayedProps> = ({
   return (
     <ConvertSVG width="800" height="493">
       <div className="top-played-wrapper">
-        {trackLists.map((list, term) => (
+        {trackLists.map((track, term) => (
           <div key={term} className="top-played-container">
             <Text className="title" weight="bold" size="title" color="standard">
               {TOP_PLAYED_LIST_TITLES[term]}
             </Text>
-
-            {list.map((track, trackIndex) => (
-              <a
-                key={`${term}-${trackIndex}`}
-                className="track"
-                href={track.href}
-              >
-                <img
-                  className="cover"
-                  src={track.image ?? ""}
-                  width="48"
-                  height="48"
-                />
-                <div className="details">
-                  <Text className="name" weight="bold">
-                    {`${track.name ?? ""} `.trim()}
-                  </Text>
-                  <Text className="artist" color="grey">
-                    {track.artist}
-                  </Text>
-                </div>
-              </a>
-            ))}
+            <a key={`${term}`} className="track" href={track.href}>
+              <img
+                className="cover"
+                src={track.image ?? ""}
+                width="48"
+                height="48"
+              />
+              <div className="details">
+                <Text className="name" weight="bold">
+                  {`${track.name ?? ""} `.trim()}
+                </Text>
+                <Text className="artist" color="grey">
+                  {track.artist}
+                </Text>
+              </div>
+            </a>
           </div>
         ))}
       </div>

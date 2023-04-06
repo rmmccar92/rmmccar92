@@ -9,6 +9,8 @@ import { IAudioFeaturesResponse } from "../../../types/spotify";
  * @param {number} progress Current playback progress in milliseconds.
  * @returns {string} CSS for Component.
  */
+
+// Seems like the gradient doesn't work in once it's converted to an Image in the README lines 96-112
 export const NOW_PLAYING_CSS = (
   audioFeatures: IAudioFeaturesResponse,
   duration: number,
@@ -112,7 +114,7 @@ img:not([src]) {
 }
 
 .bar {
-  --offset: 0;
+  --offset: 10;
   animation: bars ${
     audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1
   }s ease calc(var(--offset) * -.5s) infinite;
@@ -200,6 +202,7 @@ export const TOP_PLAYED_CSS = `
 .top-played-wrapper {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 a {
@@ -216,7 +219,7 @@ p {
 img:not([src]) {
   content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
   border-radius: 6px;
-  background: #FFF;
+  background: #606f73;
   border: 1px solid #e1e4e8;
 }
 
@@ -224,7 +227,7 @@ img:not([src]) {
   display: flex;
   align-items: center;
   max-width: 250px;
-  background: rgb(255,255,255,.6);
+  background: #606f73;
   border-radius: .3rem;
   margin: 0rem .5rem 1rem;
   padding: .7rem;
