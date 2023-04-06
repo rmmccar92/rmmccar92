@@ -9,7 +9,6 @@
 <br/>
 <br/>
 
- You can check out how I did this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
 </div>
 <br/>
 <br/>
@@ -35,12 +34,14 @@
 
 <div align="center">
 <a href="https://rmmccar92.vercel.app/api/now-playing?open">
- <img src="http://localhost:3000/api/now-playing" alt="Now Playing">
+ <img src="https://rmmccar92.vercel.app/api/now-playing" alt="Now Playing">
  </a>
 
  <br />
- <img src="http://localhost:3000/api/top-played" alt ="Top Played">
+ <img src="https://rmmccar92.vercel.app/api/top-played" alt ="Top Played">
  <p>
+ <p> You can check out how I did this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
+</p>
 <p align="center">
 Reach out to rmmccar92@gmail.com for questions.
 </p>

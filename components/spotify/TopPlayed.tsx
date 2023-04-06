@@ -34,9 +34,9 @@ export const TopPlayed: React.FC<ITopPlayedProps> = ({
       <div className="top-played-wrapper">
         {trackLists.map((track, term) => (
           <div key={term} className="top-played-container">
-            <Text className="title" weight="bold" size="title" color="standard">
+            {/* <Text className="title" weight="bold" size="title" color="standard">
               {TOP_PLAYED_LIST_TITLES[term]}
-            </Text>
+            </Text> */}
             <a key={`${term}`} className="track" href={track.href}>
               <img
                 className="cover"
