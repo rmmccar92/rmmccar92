@@ -24,6 +24,7 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"  width="45" height="45"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="graphQL" width="45" height="45" />
@@ -36,10 +37,8 @@
 <a href="https://rmmccar92.vercel.app/api/now-playing?open">
  <img src="https://rmmccar92.vercel.app/api/now-playing" alt="Now Playing">
  </a>
-
  <br />
  <img src="https://rmmccar92.vercel.app/api/top-played" alt ="Top Played">
- <p>
  <p> You can check out how I did this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
 </p>
 <p align="center">
