@@ -32,7 +32,7 @@ export const topTracks = async () => {
   // console.log("ACCESS TOKEN", access_token);
 
   return fetch(
-    "https://api.spotify.com/v1/me/top/tracks?limit=9&time_range=long_term",
+    "https://api.spotify.com/v1/me/top/tracks?limit=4&time_range=short_term",
     {
       headers: {
         "Authorization": `Bearer ${access_token}`,

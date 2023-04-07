@@ -17,6 +17,7 @@ import {
 export const convertTrackToMinimumData = async (
   track: ITrackObject
 ): Promise<IConvertedTrackObject> => {
+  // TODO: CHANGE THIS
   let albumArtUrl =
     "https://raw.githubusercontent.com/andyruwruw/andyruwruw/master/src/assets/images/default-album-art.png";
 

@@ -201,7 +201,8 @@ img:not([src]) {
 export const TOP_PLAYED_CSS = `
 .top-played-wrapper {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
