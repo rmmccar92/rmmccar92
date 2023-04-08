@@ -38,6 +38,7 @@
  <img src="https://rmmccar92.vercel.app/api/now-playing" alt="Now Playing">
  </a>
  <br />
+ <p>Currently on Rotation </p>
  <img src="https://rmmccar92.vercel.app/api/top-played" alt ="Top Played">
  <p> You can check out how I did this ⬆️<a href="https://github.com/rmmccar92/rmmccar92/blob/main/credits.md">Here!</a>
 </p>
