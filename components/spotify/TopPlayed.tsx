@@ -30,7 +30,7 @@ export const TopPlayed: React.FC<ITopPlayedProps> = ({
   trackLists,
 }: ITopPlayedProps) => {
   return (
-    <ConvertSVG width="800" height="493">
+    <ConvertSVG width="800" height="200">
       <div className="top-played-wrapper">
         {trackLists.map((track, term) => (
           <div key={term} className="top-played-container">
