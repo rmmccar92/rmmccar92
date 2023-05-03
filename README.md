@@ -6,6 +6,7 @@
 # I'm <span style="color: #8D41E6;"> Ryan</span>
 
 <h2>Welcome to my page.</h2>
+<p> Currently I help teach people how to code! In the fairly recent past I made the decision to switch careers from the A/V industry to the Software Development industry and have been here ever since. I love to learn and look forward to the opportunities that await</p>
 <br/>
 <br/>
 
