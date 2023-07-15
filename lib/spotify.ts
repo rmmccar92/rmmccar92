@@ -10,7 +10,7 @@ import {
 
 const getAccessToken = async () => {
   const refresh_token = process.env.REFRESH_TOKEN;
-  console.log("REFRESH TOKEN", refresh_token);
+  // console.log("REFRESH TOKEN", refresh_token);
   try {
     const response = await fetch("https://accounts.spotify.com/api/token", {
       method: "POST",
@@ -26,7 +26,7 @@ const getAccessToken = async () => {
       }),
     });
     const result = await response.json();
-    console.log("RESPONSE", result);
+    // console.log("RESPONSE", result);
     return result;
   } catch (e) {
     console.log("ERROR", e);
